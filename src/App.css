@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background:#f1fef2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* hero */
+.backgroundImage {
+  height: 100vh;
+  background-image: url("./Assets/Image/hair-tools.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  padding-left: clamp(0.5em, 1em, 2em);
+  display: flex;
+  justify-content: space-between;
+}
+.hero-title {
+  max-width: 18ch;
+  padding-top: clamp(0.1em, 1em, 2em);
+}
+.cta{
+  margin-top:1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;
+  letter-spacing:2px;
+  background:green;
+  width:fit-content;
+  padding: .8em 1.2em;
+  border-radius:.8em;
+  border: 2px solid green;
+  transition:10ms ease-in-out;
+}
+.cta:hover{
+  background:transparent;
+}
+.cta:visited{
+  color:black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* about */
+.about {
+  background-color: #333;
 }
+/*forma */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* testemonial */
+.testelmonial-avatar {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  padding-top: 2em;
+  justify-content: center;
+}
+.testelmonial-text {
+  flex: 4;
+  font-size: 1.2em;
+  padding: 1em;
+  line-height: 1.6;
+  max-width: 80%;
+  align-self: center;
+}
+.testelmonial-inner-text {
+  border-radius: 0.5em;
+  padding: 1.5em;
+  padding-left: 2em;
+  max-width: 40em;
+  position: relative;
+  background-color: #e9c8c8;
+}
+.testelmonial-inner-text::before,
+.testelmonial-inner-text::after {
+  content: "''";
+  font-style: italic;
+  position: absolute;
+  font-size: 3rem;
+}
+.testelmonial-inner-text::before {
+  left: 0.125em;
+  top: -0.25em;
+}
+.testelmonial-inner-text::after {
+  right: 0.4em;
+  bottom: -0.8em;
+}
+.avatar-name {
+  justify-content: center;
+  align-items: center;
+}
+.avatar-pic {
+  margin-bottom: 0.5em;
+}
+/* trends */
+.trends-container {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*footer */
+footer {
+  margin-top: 2em;
+  text-align: center;
+  border-top: 1px solid #333;
 }

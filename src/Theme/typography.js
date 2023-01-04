@@ -1,0 +1,95 @@
+import palette from "./palette";
+
+export default {
+  fontFamily: [
+    "Roboto",
+    "sans-serif",
+  ].join(","),
+  h1: {
+    color: palette.text.primary,
+    fontWeight: 700,
+    fontSize: "3rem",
+    letterSpacing: "-0.24px",
+    lineHeight: "50px",
+  },
+  h2: {
+    color: palette.text.primary,
+    fontWeight: 600,
+    fontSize: "2em",
+    letterSpacing: "-0.24px",
+    lineHeight: "30px",
+  },
+  h3: {
+    color: palette.text.primary,
+    fontWeight: 500,
+    fontSize: "1.75em",
+    letterSpacing: "-0.06px",
+    lineHeight: "30px",
+  },
+  h4: {
+    color: palette.text.primary,
+    fontWeight: 500,
+    fontSize: "1.5em",
+    letterSpacing: "-0.06px",
+    lineHeight: "26px",
+  },
+  h5: {
+    color: palette.text.primary,
+    fontWeight: 500,
+    fontSize: "1rem",
+    letterSpacing: "-0.05px",
+    lineHeight: "20px",
+  },
+  h6: {
+    color: palette.text.primary,
+    fontWeight: 500,
+    fontSize: ".9rem",
+    letterSpacing: "-0.05px",
+    lineHeight: "20px",
+  },
+  subtitle1: {
+    color: palette.text.primary,
+    fontWeight: 500,
+    fontSize: "1rem",
+    letterSpacing: "-0.05px",
+    lineHeight: "18px",
+  },
+  subtitle2: {
+    color: palette.text.secondary,
+    fontWeight: 400,
+    fontSize: ".9rem",
+    letterSpacing: "-0.05px",
+    lineHeight: "21px",
+  },
+  body1: {
+    color: palette.text.primary,
+    fontSize: "1rem",
+    letterSpacing: "-0.05px",
+    lineHeight: "18px",
+  },
+  body2: {
+    color: palette.text.secondary,
+    fontSize: ".8rem",
+    letterSpacing: "-0.04px",
+    lineHeight: "18px",
+  },
+  button: {
+    color: palette.text.primary,
+    fontSize: "1rem",
+    fontWeight: 500,
+  },
+  caption: {
+    color: palette.text.secondary,
+    fontSize: ".75rem",
+    letterSpacing: "0.33px",
+    lineHeight: "13px",
+  },
+  overline: {
+    color: palette.text.secondary,
+    fontSize: ".75rem",
+    fontWeight: 500,
+    letterSpacing: "0.33px",
+    lineHeight: "13px",
+    textTransform: "uppercase",
+  },
+};

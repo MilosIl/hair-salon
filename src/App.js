@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Footer from "./Layout/Footer";
+import Navbar from "./Layout/Navbar";
+
+import RoutesScreen from "./Routes";
+import { BrowserRouter } from "react-router-dom";
+
+import { Container } from "@mui/material";
+import theme from "./Theme/index";
+import { ThemeProvider } from "@mui/material";
+
+import { UserContext } from "./Context/UserContext";
+// cela aplikacija treba da bude pokrivena sa useAuth
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={''}>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <Container maxWidth={"xl"}>
+            <Navbar />
+            <RoutesScreen />
+            <Footer />
+          </Container>
+        </ThemeProvider>
+      </BrowserRouter>
+    </UserContext.Provider>
   );
 }
 

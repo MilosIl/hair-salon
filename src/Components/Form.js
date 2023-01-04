@@ -19,33 +19,36 @@ function Form() {
   const [service, setService] = useState([]);
   const [name, setName] = useState("");
 
-  const skraceno = selectedDate.toDateString();
-  const vremeKartko = selectedTime.toLocaleTimeString();
-  const duzinaKose = [{ kratka: "0.7" }, { srednja: "1" }, { duga: "1.4" }];
-  const services = [
-    {
-      MuskoSisanje: "1",
-    },
-    { "Pranje kose": "1" },
-    { "Feniranje kose na ravno": "1" },
-    { "Sisanje kose sa pranjem": "1" },
-    { "Skracivanje siski": "1" },
-    {
-      "Lokne na presu": "1",
-    },
-    { Pletenica: "1" },
-    { "Riblja kost": "1" },
-    { "Svecana frizura": "1" },
-    { "Fazoniranje brade": "1" },
+  const skracenDan = selectedDate.toDateString();
+  const skracenoVreme = selectedTime.toLocaleTimeString();
+
+  const duzinaKose = [
+    { value: "short", text: "short" },
+    { value: "middle", text: "middle" },
+    { value: "long", text: "long" },
   ];
 
-  const vremeSisanja = (duzinaKose, services) => {
-    const breakTime = 10;
-    let time = 0;
-    return (time = duzinaKose * services + breakTime);
-  };
-  vremeSisanja(duzinaKose[1], service[1]);
-  console.log(vremeSisanja);
+const [form,setForm]=useState({
+  name:"",
+  service:"",
+  hairLength:'',
+  day:"",
+  time:""
+})
+const handleChange = (e) => {
+  setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+};
+  const services = [
+    { value: `male haircut`, text: "Main haircut" },
+    { value: `trimming the beard`, text: "Trimming the beard" },
+    { value: `hairwash`, text: "Hairwash" },
+    { value: `haircut with hairwash`, text: "Haircut and hairwash" },
+    { value: `bangs shortening`, text: "Bangs shortening" },
+    { value: `press curl`, text: "Press curl" },
+    { value: "braid", text: "Braid" },
+    { value: `formal hairstyle`, text: "Formal hairstyle" },
+  ];
+
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -62,20 +65,29 @@ function Form() {
   const handleChangeTime = (value) => {
     setSelectedTime(value);
   };
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
     let noviTermin = {
       name: name,
       duzinaKose: duzinaKosa,
       usluga: service,
-      dan: skraceno,
-      vreme: vremeKartko,
+      dan: skracenDan,
+      vreme: skracenoVreme,
     };
-    console.log(noviTermin);
+    await fetch("http://localhost:5000/meetings/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(noviTermin),
+    }).catch((error) => {
+      window.alert(error);
+      return;
+    });
   };
 
   return (
-    <div className="form">
+    <div className="form" id="create">
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Stack spacing={4}>
           <TextField
@@ -86,32 +98,32 @@ function Form() {
             onChange={handleChangeName}
           />
           <FormControl sx={{ m: 1, width: 300 }}>
-            <InputLabel>Duzina trenutne kose</InputLabel>
+            <InputLabel>Hair length</InputLabel>
             <Select
+              defaultValue="Your hair length"
               onChange={handleChangeHair}
-              value={duzinaKosa}
-              input={<OutlinedInput label="Duzina trenutne kose" />}
+              value={duzinaKosa ?? " "}
+              input={<OutlinedInput label="Hair length" />}
             >
               {duzinaKose.map((duzinaKosa) => (
-                <MenuItem key={duzinaKosa} value={duzinaKosa.kratka}>
-                  {duzinaKosa}
+                <MenuItem key={duzinaKosa.value} value={duzinaKosa.value}>
+                  {duzinaKosa.text}
                 </MenuItem>
               ))}
             </Select>
           </FormControl>
           <FormControl sx={{ m: 1, width: 300 }}>
-            <InputLabel id="demo-multiple-name-label">Service</InputLabel>
+            <InputLabel id="services">Service</InputLabel>
             <Select
-              labelId="demo-multiple-name-label"
-              id="demo-multiple-name"
-              // multiple
-              value={service || ""}
+              defaultValue="Choose a service"
+              labelId="services"
+              value={service ?? ""}
               onChange={handleChangeService}
               input={<OutlinedInput label="Service" />}
             >
               {services.map((service) => (
-                <MenuItem key={service} value={service}>
-                  {service}
+                <MenuItem key={service.value} value={service.value}>
+                  {service.text}
                 </MenuItem>
               ))}
             </Select>
@@ -119,7 +131,7 @@ function Form() {
           <MobileDatePicker
             label="Day for schedule"
             inputFormat="dd/MM/yyyy"
-            value={selectedDate}
+            value={skracenDan}
             onChange={handleChangeDate}
             variant="dialog"
             renderInput={(params) => <TextField {...params} />}
