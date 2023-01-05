@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 
 function UserAdmin() {
   const [users, setUsers] = useState([]);

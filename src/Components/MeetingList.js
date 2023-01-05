@@ -46,6 +46,7 @@ export default function MeetingList() {
   };
   const handleChangeDecline = () => {
     console.log("decline");
+    // needs to show user that meeting is canceled
     deleteMeeting(meetings._id);
   };
 

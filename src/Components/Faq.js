@@ -1,4 +1,3 @@
-import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -18,7 +17,7 @@ export default function SimpleAccordion() {
           aria-controls="question-1"
           id="question-1"
         >
-          <Typography>Question 1: is this a real application</Typography>
+          <Typography>Question 1: </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
