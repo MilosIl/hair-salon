@@ -1,9 +1,9 @@
-import React from "react";
-import "../App.css"
+import React from 'react';
+import '../App.css';
 function Footer() {
   return (
     <footer>
-      Made by Mili-studio 2022 ©
+      Made by <a href="#">Mines-dev</a> 2023 ©
     </footer>
   );
 }
