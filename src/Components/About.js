@@ -38,7 +38,6 @@ function About() {
     <section className="about">
       <Stack direction={"row"}>
         <img src={studio} alt={studio} />
-
         <Typography variant="body1">
           Studio that knows what is the best for their clients. And if we don't
           know you can tell us We are working thogheter for 10+ years, with our

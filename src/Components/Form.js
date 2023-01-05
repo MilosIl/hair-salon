@@ -28,16 +28,16 @@ function Form() {
     { value: "long", text: "long" },
   ];
 
-const [form,setForm]=useState({
-  name:"",
-  service:"",
-  hairLength:'',
-  day:"",
-  time:""
-})
-const handleChange = (e) => {
-  setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-};
+// const [form,setForm]=useState({
+//   name:"",
+//   service:"",
+//   hairLength:'',
+//   day:"",
+//   time:""
+// })
+// const handleChange = (e) => {
+//   setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+// };
   const services = [
     { value: `male haircut`, text: "Main haircut" },
     { value: `trimming the beard`, text: "Trimming the beard" },
