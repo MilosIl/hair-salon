@@ -6,12 +6,13 @@ function UserAdmin() {
     let isCleaned = false;
     async function getUsers() {
       const response = await fetch(`http://localhost:5000/users/`);
-
+      
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         window.alert(message);
         return;
       }
+
       if (!isCleaned) {
         const users = await response.json();
         setUsers(users);
@@ -23,6 +24,7 @@ function UserAdmin() {
       isCleaned = true;
     };
   }, [users.length]);
+
   return <div>{users[0]?.username}</div>;
 }
 
