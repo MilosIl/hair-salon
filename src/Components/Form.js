@@ -3,7 +3,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
-import { Button, Stack, TextField } from "@mui/material";
+import { Box, Button, Stack, TextField } from "@mui/material";
 import {
   FormControl,
   InputLabel,
@@ -87,7 +87,7 @@ function Form() {
   };
 
   return (
-    <div className="form" id="create">
+    <Box className="" id="create" sx={{display:'flex', justifyContent:'center',mx:'auto', maxWidth:'600px', flexDirection:{xs:'column', md:'row'}}} >
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Stack spacing={4}>
           <TextField
@@ -97,7 +97,7 @@ function Form() {
             value={name}
             onChange={handleChangeName}
           />
-          <FormControl sx={{ m: 1, width: 300 }}>
+          <FormControl sx={{ m: 1, maxWidth: 600 }}>
             <InputLabel>Hair length</InputLabel>
             <Select
               defaultValue="Your hair length"
@@ -112,7 +112,7 @@ function Form() {
               ))}
             </Select>
           </FormControl>
-          <FormControl sx={{ m: 1, width: 300 }}>
+          <FormControl sx={{ m: 1, maxWidth: 600 }}>
             <InputLabel id="services">Service</InputLabel>
             <Select
               defaultValue="Choose a service"
@@ -148,7 +148,7 @@ function Form() {
           </Button>
         </Stack>
       </LocalizationProvider>
-    </div>
+    </Box>
   );
 }
 

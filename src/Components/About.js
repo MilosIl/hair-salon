@@ -36,25 +36,29 @@ function About() {
   ];
   return (
     <section className="about">
-      <Stack direction={"row"}>
+      <Stack direction={"row"} sx={{mb:4, flexDirection:{xs:'column', md:'row'}}}>
         <img src={studio} alt={studio} />
-        <Typography variant="body1">
+        <Box >
+
+        <Typography variant="body1" sx={{mt:4,p:4, fontSize:'1.2em'}}>
           Studio that knows what is the best for their clients. And if we don't
           know you can tell us We are working thogheter for 10+ years, with our
           large and happy base of clients.
         </Typography>
+        </Box>
       </Stack>
       <Typography variant="h2" gutterBottom>
         Our services
       </Typography>
       <Typography vartiant={"subtitle1"} gutterBottom>
-        Get your relax tretman in order
+        Get your relax tretman in order, treat your hair with style
       </Typography>
       <Stack
         direction={"row"}
-        sx={{ flexDirection: { xs: "column", md: "row" } }}
-        spacing={7}
+        sx={{ flexDirection: { xs: "column", md: "row" }, m:4, gap:4 }}
+        
         justifyContent={"center"}
+        alignItems={'center'}
       >
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
@@ -97,7 +101,8 @@ function About() {
           </CardContent>
         </Card>
       </Stack>
-      <Stack alignItems={"center"}>
+      <Stack alignItems={"center"} sx={{mt:4}}>
+        <Typography sx={{my:4, fontWeight:'bold', fontSize:'1.2rem'}}>Some of our styles</Typography>
         <Box sx={{ width: 650, height: 650 }}>
           <ImageList variant="masonry" cols={4} gap={4}>
             {hairStyles.map((hairStyle) => (
