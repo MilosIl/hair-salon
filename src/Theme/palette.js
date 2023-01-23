@@ -1,16 +1,16 @@
-import { colors } from "@mui/material";
+import { colors } from '@mui/material';
 
-const white = "#FFFFFF";
-const black = "1E212E";
+const white = '#FFFFFF';
+const black = '1E212E';
 
 export default {
   black,
   white,
   primary: {
     contrastText: white,
-    dark: "#000000",
-    main: "#AC4E4E",
-    light: "#3f404e",
+    dark: '#000000',
+    main: '#AC4E4E',
+    light: '#3f404e',
   },
   secondary: {
     contrastText: white,
@@ -25,14 +25,14 @@ export default {
     light: colors.red[400],
   },
   text: {
-    primary: "#1E212E",
+    primary: '#1E212E',
     secondary: colors.blueGrey[600],
     link: colors.blue[600],
   },
   link: colors.blue[800],
   icon: colors.blueGrey[600],
   background: {
-    default: "#E8E7E4",
+    default: '#E8E7E4',
     paper: white,
   },
   divider: colors.grey[200],

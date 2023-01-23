@@ -30,11 +30,11 @@ body {
   text-decoration:none;
   cursor:pointer;
   letter-spacing:2px;
-  background:green;
+  background:#AC4E4E;
   width:fit-content;
   padding: .8em 1.2em;
   border-radius:.8em;
-  border: 2px solid green;
+  border: 2px solid #AC4E4E;
   transition:10ms ease-in-out;
 }
 .cta:hover{
