@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 import { Link } from "react-router-dom";
 
-const pages = ["home", "about", "testimonials", "trends", "create appointment"];
+const pages = ["home", "about", "testimonials", "create appointment"];
 const settings = ["meetings", "testimonials"];
 
 const ResponsiveAppBar = () => {
@@ -99,8 +99,6 @@ const ResponsiveAppBar = () => {
           </Menu>
         </Box>
         {/* user profile   */}
-
-        
         <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
