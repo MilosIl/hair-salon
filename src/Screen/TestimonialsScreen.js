@@ -10,8 +10,6 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 import TestemonialForm from "../Components/TestemonialForm";
 
-// dodavanje,izmena i brisanje mogucnost ima samo admin(korisnik koji je logovan)
-
 function TestimonialsScreen() {
   const [testimonials, setTestimonials] = useState([]);
   const [open, setOpen] = useState(false);
