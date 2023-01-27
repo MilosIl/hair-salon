@@ -9,8 +9,7 @@ import {
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 
-// ogledala sa stolicom masazer,
-// neka mala galerija do 4-6 slika
+
 import hairDye from '../Assets/Image/hair-dye.jpg';
 import hairDryer from '../Assets/Image/hair-dryer.jpg';
 import hairSpray from '../Assets/Image/hair-spray.jpg';
@@ -23,6 +22,8 @@ import hairStyle6 from '../Assets/Image/hair-style6.jpg';
 import hairStyle7 from '../Assets/Image/hair-style7.jpg';
 import hairStyle8 from '../Assets/Image/hair-style8.jpg';
 import studio from '../Assets/Image/beauty-salon.jpg';
+
+
 function About() {
   const hairStyles = [
     hairStyle1,
@@ -34,6 +35,7 @@ function About() {
     hairStyle7,
     hairStyle8,
   ];
+  
   return (
     <section className="about">
       <Stack
