@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { colors } from '@mui/material';
 
 const white = '#FFFFFF';
