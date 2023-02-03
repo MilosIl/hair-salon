@@ -44,7 +44,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <div>
+    <>
       <Stack>
         <TextField
           label="username"
@@ -61,7 +61,7 @@ const LoginScreen = () => {
         />
         <Button onClick={handleLogin}>Login</Button>
       </Stack>
-    </div>
+    </>
   );
 };
 
