@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Avatar,
   Button,
@@ -42,7 +42,6 @@ function TestimonialsScreen() {
         "Content-Type": "application/json",
       },
     });
-
     const newTestimonials = testimonials.filter((el) => el._id !== id);
     setTestimonials(newTestimonials);
   }
