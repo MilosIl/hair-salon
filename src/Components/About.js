@@ -57,7 +57,6 @@ function About() {
             and texturizing. Our stylists will work with you to create a look
             that is both beautiful and tailored to your individual style.
           </Typography>
-
           <Typography variant='body1' sx={{p:2,fontSize:'1.2em'}}>
             We understand that our clients lead busy lives and that is why we
             offer flexible hours. We also offer
@@ -71,6 +70,7 @@ function About() {
       <Typography vartiant={'subtitle1'} gutterBottom>
         Get your relax tretman in order, treat your hair with style
       </Typography>
+
       <Stack
         direction={'row'}
         sx={{ flexDirection: { xs: 'column', md: 'row' }, m: 4, gap: 4 }}
@@ -117,6 +117,7 @@ function About() {
           </CardContent>
         </Card>
       </Stack>
+      
       <Stack alignItems={'center'} sx={{ mt: 4 }}>
         <Typography sx={{ my: 4, fontWeight: 'bold', fontSize: '1.2rem' }}>
           Some of our styles
