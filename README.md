@@ -11,4 +11,5 @@ Technologies:
 
 
 Plan for improvment of application:
-1. 
+1. To have latest trends page
+2. Sms system for notification of user
