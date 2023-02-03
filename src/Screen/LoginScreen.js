@@ -33,11 +33,15 @@ const LoginScreen = () => {
     setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const logedIn = useContext(UserContext);
   const handleLogin = (e) => {
+    logedIn={
+      username:setUser.username,
+      password:setUser.password
+    }
     e.preventDefault();
     console.log(`${setUser.username} i ${setUser.password}`);
   };
-  const logedIn = useContext(UserContext);
 
   return (
     <div>
