@@ -1,10 +1,7 @@
 import { Avatar, Stack, Typography } from "@mui/material";
-import React from "react";
 import "../App.css";
 
 function Testelmonial() {
-
-
   function stringAvatar(name) {
     return {
       sx: {
@@ -14,14 +11,12 @@ function Testelmonial() {
       children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
     };
   }
-
   return (
     <Stack sx={{ flexDirection: { sm: "column", md:'row' } }} justifyContent={"space-around"} spacing={4} m={4}>
       <Stack direction="column" className="avatar-name estelmonial-avatar">
         <Avatar {...stringAvatar("Verica Ruzic")} className="avatar-pic" />
         <Typography variant="p">Verica Ruzic</Typography>
       </Stack>
-
       <div className="testelmonial-text">
         <Typography variant="body1">
           <div className="testelmonial-inner-text">
