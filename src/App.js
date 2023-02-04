@@ -10,7 +10,6 @@ import theme from "./Theme/index";
 import { ThemeProvider } from "@mui/material";
 
 import { UserContext } from "./Context/UserContext";
-// cela aplikacija treba da bude pokrivena sa useAuth
 
 function App() {
 
