@@ -13,4 +13,4 @@ Technologies:
 
 Plan for improvment of application:
 1. To have latest trends page
-2. Sms system for notification of user
+2. Push notification system for informations about appointment
