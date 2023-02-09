@@ -4,13 +4,13 @@ Web application where you can check out some of their hairstyles and what does s
 
 Technologies:
 
-1. React
-2. Material UI
-3. MongoDb
-4. ExpressJs
-5. Data.io
-
+- React
+- Material UI
+- MongoDb
+- ExpressJs
+- Data.io
 
 Plan for improvment of application:
-1. To have latest trends page
-2. Push notification system for informations about appointment
+
+  - To have latest trends page
+  - Push notification system for informations about appointment
