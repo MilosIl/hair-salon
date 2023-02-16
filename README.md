@@ -14,4 +14,4 @@ Plan for improvment of application:
   - To have multiple users, that can see their schudler on appointments 
   - To have latest trends page
   - Push notification system for informations about appointment
-  - Premission system, that workes can also log to the application
+  - Premission system, that admin can make teams for their workers to organize them better
